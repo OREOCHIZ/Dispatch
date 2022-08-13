@@ -10,7 +10,7 @@
 
 - **Keypoint 3D reconstruction**: SIFT 로 찾아낸 스테레오 이미지들의 Keypoint 들을 매칭 시킨 후 3D 좌표계로 변환해주는 기능이다.
 
-**Local Patch 3D reconstruction**: 두 스테레오 이미지의 Keypoint 주변의 매우 작은 patch 들을 뽑아낸 다음, 이 patch 들에 대해 스테레오 매칭을 부분적으로 수행하는 기능을 도입했다. 이를 이용하여 정확도를 높인 dense 스테레오 매칭을 수행할 수 있었다.
+- **Local Patch 3D reconstruction**: 두 스테레오 이미지의 Keypoint 주변의 매우 작은 patch 들을 뽑아낸 다음, 이 patch 들에 대해 스테레오 매칭을 부분적으로 수행하는 기능을 도입했다. 이를 이용하여 정확도를 높인 dense 스테레오 매칭을 수행할 수 있었다.
 
 ## How to run DisPatch?
 ```
@@ -25,7 +25,12 @@ Open3d 0.13.0
 cd reconstruction
 python feature_match.py
 ```
-1) 카메라 캘리브레이션, 2) 스테레오 이미지 undistortion, 3) Keypoint 3d reconstruction, 4) Local Patch 3D reconstruction 을 차례대로 실행한 후, Open3D 로 3차원 공간상에 포인트 클라우드를 띄워주는 과정까지 확인할 수 있다.
+1) 카메라 캘리브레이션
+2) 스테레오 이미지 undistortion
+3) Keypoint 3d reconstruction
+4) Local Patch 3D reconstruction 
+
+을 차례대로 실행한 후, Open3D 로 3차원 공간상에 포인트 클라우드를 띄워주는 과정까지 확인할 수 있다.
 
 ## Folder 
 - calib: 체커보드 캘리브레이션 이미지 15장이 들어있는 폴더
